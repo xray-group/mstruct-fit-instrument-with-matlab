@@ -2,7 +2,7 @@
 
 ## Download
 
-Download [v0.1-beta.zip](archive/v0.1-beta.zip)
+Download [v0.1-beta.zip](https://github.com/xray-group/mstruct-fit-instrument-with-matlab/archive/v0.1-beta.tar.gz)
 
 ### Requirements:
 
