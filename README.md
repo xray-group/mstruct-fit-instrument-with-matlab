@@ -80,4 +80,4 @@ The determined profile parameters should be also critically reviewd. A limitted 
 is measured for the instrumental function determination (20-150 deg here) but often the same
 instrumental function is used later at lower or higher angles. So it is extrapolated. It is
 important the profile parameters are valid in the whole x-range required. In particular
-check if the profile shape parameter `k <= 1` at the high angles.
+check if the profile shape parameter `k <= 1` at high angles.
