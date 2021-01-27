@@ -68,7 +68,7 @@ A small discrepancy in the reulting lattice parameter in the example template in
 inzorrect setting for 2Theta-Zero. However this worksheet is unralated to the instrumental profile
 determination.
 
-## Step 2: Review the instrument polynomial approximation in Excel
+## Step 3: Review the instrument polynomial approximation in Excel
 
 The mstruct Excel worksheet gives directly the profile coefficients that can be used in `MStruct`
 program. There is a possibility to compare with an additional set of parameters that can be set
