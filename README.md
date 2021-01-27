@@ -19,7 +19,7 @@ The workflow to receive the instrumental function parameters for MStruct is
 2. import fitting result into an Excel worksheet
 3. review the instrument polynomial approximation in Excel
 
-## Matlab fitting
+## Step 1: Matlab fitting
 
 This is a semi-automatic procedure. You may want to adjust x-ray wavelength and spectral components ratio,
 input patter file name or the whole data import procedure. Two methods for importing the standard peak table
@@ -43,3 +43,37 @@ leaving the user an opportunity to inspect the fit in detail. One needs to press
 The script creates simple plots with the peak profile parameters in the end.
 
 Profile parameters are saved to **params_1.txt**.
+
+## Step 2: Excel import
+
+Results from `params_1.txt` must be imported into the **lab6bb-pixcel-ns.xls** template excel workbook.
+
+In Excel use:
+```
+File -> Open -> params_1.txt -> choose Deliminated -> choose Space -> ...
+```
+and delete columns except: 2Theta, intensity, hwhm, k, Asym. The format must be compatible with the
+template table in the 'params_1' worksheet.
+
+One can see the parmaeters interpolation in the next Excel worksheet: mstruct. If there is more or
+less peaks than in the template workbook the bounds for Excel functions must be extended or rows deleted.
+
+One can see also the Cohen-Wagner plot for displacement correction in the last worksheet. Note that this
+lattice parameter evaluation method is valid only for cubic materials and Bragg-Brentano geometry.
+A small discrepancy in the reulting lattice parameter in the example template indicates a possible
+inzorrect setting for 2Theta-Zero. However this worksheet is unralated to the instrumental profile
+determination.
+
+## Step 2: Review the instrument polynomial approximation in Excel
+
+The mstruct Excel worksheet gives directly the profile coefficients that can be used in `MStruct`
+program. There is a possibility to compare with an additional set of parameters that can be set
+in the worksheet. The secondary parameters configuration in the example worksheet comes from the
+whole powder pattern fitting of the given experimental pattern in MStruct. One can see the results
+are slightly different. Anyway one can set e.g. older parameters set for comparison etc.
+
+The determined profile parameters should be also critically reviewd. A limitted angular range
+is measured for the instrumental function determination (20-150 deg here) but often the same
+instrumental function is used later at lower or higher angles. So it is extrapolated. It is
+important the profile parameters are valid in the whole x-range required. In particular
+check if the profile shape parameter `k <= 1` at the high angles.
