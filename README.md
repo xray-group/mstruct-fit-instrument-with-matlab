@@ -1,5 +1,9 @@
 # mstruct-fit-instrument-with-matlab
 
+## Download
+
+Download [v0.1-beta.zip](archive/v0.1-beta.zip)
+
 ### Requirements:
 
 - measured data in 'xy' format
